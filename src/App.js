@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './Home'
+import Sidebar from './components/Sidebar'
+import { useEffect } from 'react'
+import { useStateContext } from './context/MyFirstProvider'
 
-function App() {
+export default function App() {
+  const {ActiveSidebar , setScreenSize , ScreenSize} = useStateContext()
+  useEffect(()=>{
+    setScreenSize(window.innerWidth)
+} , [window.innerWidth])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=' '>
+     {(ScreenSize>=900  || ActiveSidebar) && <Sidebar/>}
+      <Home/>
     </div>
-  );
+  )
 }
-
-export default App;
