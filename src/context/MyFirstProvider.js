@@ -8,7 +8,7 @@ const  MyProvider=({children})=>{
      
     useEffect(()=>{
         window.addEventListener('resize' , ()=>setScreenSize(window.innerWidth))
-    } , [window.innerWidth])
+    } , [ScreenSize])
         return (
     <MyContext.Provider value={{ScreenSize , setScreenSize , ActiveSidebar , setActiveSidebar }}>
         {children}

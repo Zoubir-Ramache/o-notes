@@ -8,7 +8,7 @@ export default function App() {
   const {ActiveSidebar , setScreenSize , ScreenSize} = useStateContext()
   useEffect(()=>{
     setScreenSize(window.innerWidth)
-} , [window.innerWidth])
+} , [ScreenSize , setScreenSize])
 
   return (
     <div className=' '>

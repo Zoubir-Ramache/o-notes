@@ -9,11 +9,11 @@ export default function Navbar() {
 
   return (
     <>
-    <div className={`navbar ${ScreenSize <700 && 'fixed'} z-20  bg-base-100`}>
+    <div className={`navbar ${ScreenSize <700 && 'fixed'} z-20  bg-base-300`}>
     <div className="flex-1">
      
     {ScreenSize < 900 && ! ActiveSidebar &&<button onClick={()=>setActiveSidebar(true)} className="btn   normal-case text-xl"><GoThreeBars/></button>}
-    <button className="btn btn-ghost  normal-case text-xl">LOGO</button>
+    <button className="btn btn-ghost  normal-case text-xl "   >LOGO</button>
     </div>
     
     
@@ -30,13 +30,13 @@ export default function Navbar() {
         </label>
         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
           <li>
-            <a className="justify-between">
+            <button className="justify-between">
               Profile
               {/* this is from daisy ui library , maybe you will need it later  <span className="badge">New</span> */}
-            </a>
+            </button>
           </li>
-          <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><button>Settings</button></li>
+          <li><button>Logout</button></li>
         </ul>
       </div>
     </div>
