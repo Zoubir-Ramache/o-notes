@@ -13,7 +13,7 @@ export default function Sidebar() {
   return (
     <>
    {ScreenSize>900 && <div className='w-80 h-screen  inline-block overflow-hidden'></div>}
-   <div className={` border-r-8 border-secondary   rounded-badge bg-base-100 inline-block w-80  fixed top-0 left-0 h-screen  overflow-scroll z-30 ${ScreenSize<=700 ? 'fixed': 'relative'} `}>
+   <div className={` border-r-8 border-secondary   rounded-badge bg-base-100 inline-block w-80   top-0 left-0 h-screen fixed  overflow-scroll z-30  `}>
      {ScreenSize<=900 && <button className='btn  btn-circle absolute shadow-lg top-1 right-1 z-10' onClick={()=>setActiveSidebar(false)}><GoX size={25}/></button>}
       
     {/* <Link to={'/'}>my notes </Link> */}
