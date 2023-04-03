@@ -2,8 +2,8 @@ import React from 'react'
 import { useStateContext } from '../context/MyFirstProvider'
 export default function Settings() {
   
-  const {theme , setTheme} = useStateContext()
-  const Mytehmes =["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave",
+  const { setTheme} = useStateContext()
+  const Mytehmes =[ "dark","light", "cupcake", "bumblebee", "emerald", "corporate", "synthwave",
                     "cyberpunk", "valentine", "halloween",
                    "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black",
                   "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night",
@@ -11,7 +11,7 @@ export default function Settings() {
   return (
     <>
 
-    <h1 className=' ml-4 mt-2  font-bold  text-primary-content  text-xl'> choose your theme : </h1>
+    <h1 className='  ml-4 mt-2  font-bold  text-primary-content  text-xl'> choose your theme : </h1>
 
 {/* if you want to use the drop down with more styles in the future  */}
   {/* <div className="  dropdown dropdown-right">
@@ -22,11 +22,11 @@ export default function Settings() {
   </ul>
     </div> */}
 
-    <select className="select select-secondary  text-lg  text-primary w-full ml-10 mt-4 max-w-xs">
-         <option disabled selected>theme</option>
+    <select  className="select select-secondary  text-lg  text-primary w-full mx-4 mt-4 max-w-xs">
+         {/* <option disabled selected>theme</option> */}
 
           {Mytehmes.map((theme)=>{
-            return <option onClick={()=>setTheme(theme)}> {theme}</option>
+            return <option   key={theme} onClick={()=>setTheme(theme)}> {theme}</option>
           })}
     </select>
 

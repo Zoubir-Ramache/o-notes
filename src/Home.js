@@ -5,6 +5,7 @@ import WriteNewNote from './components/WriteNewNote';
 import Settings from './components/Settings';
 import Navbar from './components/Navbar';
 import { useStateContext } from './context/MyFirstProvider';
+import PageNotFound from './components/PageNotFound';
 export default function Home() {
   const {ScreenSize} =useStateContext()
   return (
@@ -17,6 +18,7 @@ export default function Home() {
             <Route path='/' element={<Notes/>}/> 
             <Route path='/WriteNote' element={<WriteNewNote/>}/>
             <Route path='Settings' element={<Settings/>}/>
+            <Route path='*' element={<PageNotFound/>}/>
           </Routes>
         </div>
       </div>

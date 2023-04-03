@@ -12,10 +12,15 @@ export default function Notes() {
   return (
     
 
-    <div className=' '>
+    <div className=' w-full flex flex-wrap justify-center'>
       {array.map((item)=><SingleNote key={item} title={item}/>)}
  
    
+    <div className=' opacity-0 h-0 inline-block w-80'></div> 
+    <div className=' opacity-0 h-0 inline-block w-80'></div> 
+    <div className=' opacity-0 h-0 inline-block w-80'></div> 
+    <div className=' opacity-0 h-0 inline-block w-80'></div> 
+    <div className=' opacity-0 h-0 inline-block w-80'></div> 
 
     </div>
     
