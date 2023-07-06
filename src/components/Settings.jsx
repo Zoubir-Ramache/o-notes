@@ -2,7 +2,7 @@ import React from 'react'
 import { useStateContext } from '../context/MyFirstProvider'
 export default function Settings() {
   
-  const { setTheme} = useStateContext()
+  const {theme , setTheme} = useStateContext()
   const Mytehmes =[ "dark","light", "cupcake", "bumblebee", "emerald", "corporate", "synthwave",
                     "cyberpunk", "valentine", "halloween",
                    "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black",
@@ -22,11 +22,15 @@ export default function Settings() {
   </ul>
     </div> */}
 
-    <select  className="select select-secondary  text-lg  text-primary w-full mx-4 mt-4 max-w-xs">
+    <select  className="select select-secondary  text-lg  text-primary w-full mx-4 mt-4 max-w-xs" defaultValue={theme}>
          {/* <option disabled selected>theme</option> */}
 
-          {Mytehmes.map((theme)=>{
-            return <option   key={theme} onClick={()=>setTheme(theme)}> {theme}</option>
+          {
+          
+          
+          Mytehmes.map((t)=>{
+            
+            return <option   key={t} onClick={()=>setTheme(t)}> {t}</option> 
           })}
     </select>
 
